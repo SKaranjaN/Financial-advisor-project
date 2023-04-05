@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body id="body">
+    <div id="div">
+        <form id="form">
+            <p>What is your income?</p>
+            <input type="checkbox" id="Annual">
+            <label>Annual</label><br>
+            <input type="checkbox" id="Monthly">
+            <label>Monthly</label><br>
+            <input type="checkbox" id="Weekly">
+            <label>Weekly</label>
+            <br ><br >
+            <input id="incomeInput" type="text">
+            <br ><br >
+            <label>Select your currency</label>
+            <br ><br >
+            <input type="checkbox" id="Ksh">
+            <label>Ksh</label><br>
+            <input type="checkbox" id="Usd">
+            <label>Usd</label><br>
+            <br ><br >
+            <p>What are your daily expenses?</p>
+            <label id="expenses"></label>
+            <input id="expensesInput" type="text">
+            <br ><br >
+            <p>How much would you like to save monthly?</p>
+            <label id="savings"></label>
+            <input id="savingsInput" type="text">
+            <br ><br >
+            <button id="submit" onclick="alert(calculateIncome())">Submit</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
