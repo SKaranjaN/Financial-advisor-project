@@ -15,6 +15,8 @@
 // let income;
 // let expenses;
 // let savings;
+
+
 // // Step 2: Create a function to calculate the user's annual income
 //This function takes the income, whether daily, weekly or monthly and calculates the annual income
 function calculateIncome() {
@@ -22,26 +24,29 @@ function calculateIncome() {
     const weeklyChecked = document.getElementById('Weekly').checked;
     const monthlyChecked = document.getElementById('Monthly').checked;
     const annuallyChecked = document.getElementById('Annual').checked;
-    if (weeklyChecked) {
-        const monthlyOnWeekly = (incomeValue * 4);
+    
+    if (weeklyChecked && !monthlyChecked && !annuallyChecked) {
       return (incomeValue * 4);
-    } else if (monthlyChecked) {
+    } else if (!weeklyChecked && monthlyChecked && !annuallyChecked) {
       return (incomeValue);
-    } else if (annuallyChecked) {
+    } else if (!weeklyChecked && !monthlyChecked && annuallyChecked) {
       return (incomeValue / 12);
     } else {
-      return "Please select an income frequency.";
+      return alert("Please select one income frequency.");
     }
   }
 
 // // Step 3: Create a function to calculate the user's monthly expenses
 function calculateExpenses() {
   // code to calculate expenses
+  const currencySymbol = getCurrencySymbol();
     const expenseValue = document.getElementById('expensesInput').value;
     if (expenseValue > 0) {
-      const monthlyExpense = (calculateIncome() / 2);
-      const dailyExpense = (monthlyExpense / 30);
-      const expensesMessage = (`${monthlyExpense}, this should be your monthly expenses and, ${dailyExpense}, this should be your daily expenses`);
+      const monthlyExpense = Math.round((calculateIncome() / 2));
+      const dailyExpense = Math.round((monthlyExpense / 30));
+      //This was to test whether the function works correctly although it will be called by the displayFinancialInfo function.
+      const expensesMessage = (`${monthlyExpense.toLocaleString()} should be the recommended monthly expenses or even less if you can.
+    The recommended daily expenses should be ${currencySymbol}${dailyExpense.toLocaleString()} or even less if you can`);
       return (expensesMessage);
     } else {
       return "Kindly input an amount as your expense.";
@@ -51,31 +56,63 @@ function calculateExpenses() {
 // // Step 4: Create a function to calculate the user's monthly savings
 function calculateSavings() {
   // code to calculate savings
-  const savingsMonthly = ((calculateIncome *20)/100);
-  const savingsDaily = (savingsMonthly/30);
-  const savingsMessage = (`${savingsMonthly}, This should be your monthly savings and this, ${savingsDaily}, should be your daily savings.`)
+  const currencySymbol = getCurrencySymbol();
+  const savingsMonthly = Math.round(((calculateIncome() *20)/100));
+  const savingsDaily = Math.round((savingsMonthly/30));
+  //This was to test whether the function works correctly although it will be called by the displayFinancialInfo function.
+  const savingsMessage = (`${savingsMonthly.toLocaleString()}, is the recommended amount for you to save monthly and to realize this, the recommended daily savings should be atleast ${currencySymbol}${savingsDaily.toLocaleString()}`)
   return(savingsMessage);
 }
-// // Step 5: Create a function to display the user's financial information
-// function displayFinancialInformation() {
-//   // code to display income, expenses, and savings
-// }
+// Step 5: Create a function to display the user's financial information
+function displayFinancialInformation() {
+  // code to display income, expenses, and savings
+  const income = Math.round(calculateIncome());
+  const expenses = calculateExpenses();
+  const savings = calculateSavings();
+  const currencySymbol = getCurrencySymbol();
+
+  const financialInfo = `Your monthly income is ${currencySymbol}${income.toLocaleString()}.
+  ${currencySymbol}${expenses}.
+  ${currencySymbol}${savings}.`;
+  const displayElement = document.createElement('p');
+  displayElement.innerText = financialInfo;
+  const body = document.getElementById('body');
+  body.appendChild(displayElement);
+}
 // // Step 6: Call the functions in the appropriate order to calculate and display the user's financial information
 // calculateIncome();
 // calculateExpenses();
 // calculateSavings();
 // displayFinancialInformation();
 
+
+//Currency function
+
+function getCurrencySymbol() {
+    const kshChecked = document.getElementById("Ksh").checked;
+    const usdChecked = document.getElementById("Usd").checked;
+
+    if (kshChecked) {
+      return 'Ksh. ';
+    } else if (usdChecked) {
+      return 'USD ';
+    } else {
+      return '';
+    }
+  }
+
+//Eventlistener for the submit button 
+
+const submitButton = document.getElementById('submit');
+submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    const infoData = displayFinancialInformation();
+    // alert(infoData);
+});
+
+
+
 //Fetch the data from the API
 // const apiData = "https://api.currencyapi.com/v3/latest?apikey=4CpaYxoACbxAMvtSNNUjSbDZCggfAWL0pidRcHt6";
 // const baseUrl = "http://localhost:3000";
 // 
-//Eventlistener for the submit button 
-
-const submitButton = document.getElementById('submit');
-submitButton.addEventListener('click', () => {
-  const calculatedIncome = calculateIncome();
-  alert(calculatedIncome);
-  const calculatedExpense = calculateExpenses();
-  alert(calculatedExpense);
-});
