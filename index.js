@@ -121,7 +121,7 @@ fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accoun
   .then(response => response.json())
   .then(data => {
     const exchangeRate = data.exchange_rate;
-    exchangeRateDiv.textContent = `${exchangeRate} KES = 1 USD`;
+    exchangeRateDiv.textContent = `1 USD = ${exchangeRate} KES`;
   })
   .catch(error => {
     console.error('Error fetching exchange rate:', error);
@@ -138,3 +138,18 @@ fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accoun
 //key a707eed4dbmshbb6575b7dab2316p177f63jsnadf3ac3474OO
 //host yh-finance.p.rapidapi.com
 
+// const url = 'http://data.fixer.io/api/latest?access_key=fAPfog4rTdxeUqidgZKULnXnf9KVgMaH&base=EUR&symbols=USD,KES';
+
+// fetch(url)
+// .then(response => response.json())
+// .then(data => {
+//   // Access the exchange rate for KES/USD pair
+//   const kesUsdRate = data.rates.USD / data.rates.KES;
+//   const rateElement = document.getElementById('exchange-rate');
+//   rateElement.innerText = `1 USD is currently worth ${kesUsdRate.toFixed(2)} KES`;
+// })
+// .catch(error => {
+//   console.error('Error fetching exchange rates data:', error);
+// });
+
+// key fAPfog4rTdxeUqidgZKULnXnf9KVgMaH
