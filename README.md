@@ -1,6 +1,13 @@
-Senti-Application
-Author
-Stephen Karanja. 6/04/2023.
+# Senti-Application
+
+Author: Stephen Karanja. 6/04/2023.
+
+Description: A simple budgeting application that lets you calculate your daily and monthly income, expenses, and savings.
+
+Landing Page:
+![Landing page photo](Images/1680791336340.jpg) 
+
+Demo: You can demo the site here.
 
 Features:
 - Input your income based on the frequency.
@@ -8,8 +15,7 @@ Features:
 - You can input your speculated daily expenses.
 - You can input your desired monthly savings.
 
-Landing Page
-Alt text
+Specifications:
 
 Setup/Installation Requirements:
 Here is a run-through of how to set up the application:
@@ -22,8 +28,7 @@ Known Bugs: None currently.
 
 Technologies Used: HTML, CSS, and JavaScript.
 
-Support and contact details
+Support and Contact Details:
 Primary E-mail Address: skaranja654@gmail.com
 
-License
-This is under the MIT license Copyright (c) {2023} {Stephen Karanja}
+License: This project is licensed under the MIT License. (c) 2023 Stephen Karanja.
