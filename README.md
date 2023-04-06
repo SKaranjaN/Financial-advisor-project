@@ -1,40 +1,17 @@
-Senti-Application
-Author
-Stephen Karanja. 6/04/2023.
+# Phase-1-Code-Challenge-Flatacuties-080421
+# Phase-1-Code-Challenge-Flatacuties-080421
+Simple overview of use/purpose.
 
-Description
-A simple budgeting application that let's you calculate your daily and monthly income, expenses and savings.
+Description An in-depth paragraph about your project and overview of use. This is an app called Flatacuties that allows a user to choose and vote their favorite animal that they encountered at the zoo depending on the "cute-meter". It's an interactive application that can calculate the total votes for each of the animals.
+Getting Started Dependencies
 
-Landing Page
-![Alt text](Images/image (1).png?raw=true "Title")
-![Alt text](Images/image (1).png) 
+Find and open the code challenge assignment and download the linked ZIP file Unzip the file on your computer In your terminal, change directory (cd) into the unzipped challenge directory Run ls; you should see a bin/ directory and a code-challenge.bundle file) Run ruby bin/start from the directory; this will create a new directory called code-challenge/ cd into the new code-challenge/ directory and open it in your code editor To work on your code challenge:
+Ensure that you're in the code-challenge/ directory Follow the instructions in the README.md file git add . and git commit inside of the code-challenge/ directory often as you're working To submit the code challenge:
+Navigate to the parent directory of code-challenge/ in your terminal Run ruby bin/end, which will create a new file, .bundle in that directory (for example, alicia.bundle) Navigate back to the code challenge assignment in Canvas Upload .bundle to the assignment and submit
 
-Demo
-You can demo the site here.
+Authors Contributors names and contact info
+Stephen Karanja
+Brian Ng'eno
 
-Features
-Input your income based on the frequency.
-Select your currency, although, there are just two options.
-You can input your speculated daily expenses.
-You can input your desired monthly savings.
-
-Specifications
-Setup/Installation Requirements
-Here is a run through of how to set up the application:
-
-Step 1 : Clone this repository using the git clone link:
-https://github.com/SKaranjaN/Financial-advisor-project .git
-Step 2 : Navigate to the directory:
-cd Financial-advisor-project. 
-Step 3 : Open the directory created with your favorite IDE. If Atom type atom . if VSCode type code . . This will lauch the editor with the project setup,
-Now feel free to hack around the project.
-Known Bugs
-None currently.
-Technologies Used
-HTML, CSS and JavaScript.
-
-Support and contact details
-Primary E-mail Address: skaranja654@gmail.com
-
-License
-This is under the MIT license Copyright (c) {2023} {Stephen Karanja}
+Version History 0.1 Various bug fixes and optimizations See commit change or See release history 0.1 Initial Release
+Acknowledgments Moringa School FlatIron School BrianNgeno
