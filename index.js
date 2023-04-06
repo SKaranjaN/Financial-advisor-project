@@ -128,6 +128,10 @@ fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accoun
     exchangeRateDiv.textContent = 'Error fetching exchange rate';
   });
 
+  //DOMContentLoaded Event
+  document.addEventListener('DOMContentLoaded', () => {
+  });
+  
 // const apiData = "https://api.currencyapi.com/v3/latest?apikey=4CpaYxoACbxAMvtSNNUjSbDZCggfAWL0pidRcHt6";
 // const baseUrl = "http://localhost:3000";
 // 
