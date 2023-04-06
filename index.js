@@ -110,9 +110,35 @@ submitButton.addEventListener('click', (e) => {
     // alert(infoData);
 });
 
+//EventListener for the reset button
+
+const resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", () => reset.default)
+
 
 
 //Fetch the data from the API
+
+const exchangeRateDiv = document.getElementById('exchange-rate');
+
+fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange')
+  .then(response => response.json())
+  .then(data => {
+    const exchangeRate = data.exchange_rate;
+    exchangeRateDiv.textContent = `1 USD = ${exchangeRate} KES`;
+  })
+  .catch(error => {
+    console.error('Error fetching exchange rate:', error);
+    exchangeRateDiv.textContent = 'Error fetching exchange rate';
+  });
+
 // const apiData = "https://api.currencyapi.com/v3/latest?apikey=4CpaYxoACbxAMvtSNNUjSbDZCggfAWL0pidRcHt6";
 // const baseUrl = "http://localhost:3000";
 // 
+
+//apilayer.com fAPfog4rTdxeUqidgZKULnXnf9KVgMaH key
+
+
+//key a707eed4dbmshbb6575b7dab2316p177f63jsnadf3ac3474OO
+//host yh-finance.p.rapidapi.com
+

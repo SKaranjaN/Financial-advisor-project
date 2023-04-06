@@ -18,6 +18,7 @@
             <input type="checkbox" id="Weekly">
             <label>Weekly</label>
             <br ><br >
+            <i id="note">NB:Do not include a comma.</i><br >
             <input id="incomeInput" type="text">
             <br ><br >
             <label>Select your currency</label>
@@ -36,7 +37,9 @@
             <input id="savingsInput" type="text">
             <br ><br >
             <button id="submit" onclick="displayFinancialInformation(e)">Submit</button>
+            <button id="reset">Reset</button>
         </form>
+        <div id="exchange-rate"></div>
     </div>
     <script src="index.js"></script>
 </body>
