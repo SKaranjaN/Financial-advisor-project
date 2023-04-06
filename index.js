@@ -92,9 +92,9 @@ function getCurrencySymbol() {
     const kshChecked = document.getElementById("Ksh").checked;
     const usdChecked = document.getElementById("Usd").checked;
 
-    if (kshChecked) {
+    if (kshChecked && !usdChecked) {
       return 'Ksh. ';
-    } else if (usdChecked) {
+    } else if (usdChecked && !kshChecked) {
       return 'USD ';
     } else {
       return '';
@@ -121,7 +121,7 @@ resetBtn.addEventListener("click", () => reset.default)
 
 const exchangeRateDiv = document.getElementById('exchange-rate');
 
-fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange')
+fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accounting/od/rates_of_exchange?fields=country_currency_desc')
   .then(response => response.json())
   .then(data => {
     const exchangeRate = data.exchange_rate;
