@@ -4,18 +4,6 @@ nav {
     height: 700px;
   }
   
-  nav ul {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  nav li img {
-    height: 30px;
-    width: 30px;
-    margin-left: 10px;
-    object-fit: cover;
-  }
 body {
     background-color: #f2f2f2;
     font-family: Arial, sans-serif;

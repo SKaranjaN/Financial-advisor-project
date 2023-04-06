@@ -45,7 +45,7 @@ function calculateExpenses() {
       const monthlyExpense = Math.round((calculateIncome() / 2));
       const dailyExpense = Math.round((monthlyExpense / 30));
       //This was to test whether the function works correctly although it will be called by the displayFinancialInfo function.
-      const expensesMessage = (`${monthlyExpense.toLocaleString()} should be the recommended monthly expenses or even less if you can.
+      const expensesMessage = (`${monthlyExpense.toLocaleString()} should be your recommended monthly expenses or even less if you can.
     The recommended daily expenses should be ${currencySymbol}${dailyExpense.toLocaleString()} or even less if you can`);
       return (expensesMessage);
     } else {
