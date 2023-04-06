@@ -59,17 +59,33 @@ input[type="text"] {
     border-radius: 5px;
 }
 
-button.btn-primary {
-    margin-top: 10px;
-    padding: 5px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button.btn-primary:hover {
-    background-color: #0062cc;
-}
-
+button {
+    background-color: #4CAF50; /* set the background color */
+    border: none; /* remove the border */
+    color: white; /* set the text color */
+    padding: 10px 20px; /* add some padding */
+    text-align: center; /* center the text */
+    text-decoration: none; /* remove underline */
+    display: inline-block; /* display as a block element */
+    font-size: 16px; /* set the font size */
+    border-radius: 5px; /* add some border radius */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* add some shadow */
+    transition: all 0.3s ease; /* add transition effect */
+  }
+  
+  button:hover {
+    background-color: #3e8e41; 
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); 
+    transform: translate(-1px, -1px); 
+  }
+  
+  #reset {
+    background-color: #f44336; 
+  }
+  
+  #reset:hover {
+    background-color: #d32f2f; 
+  }
 #note {
     font-size: 12px;
     color: #777;
