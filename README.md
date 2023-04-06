@@ -6,8 +6,7 @@ Description
 A simple budgeting application that let's you calculate your daily and monthly income, expenses and savings.
 
 Landing Page
-
-Alt text
+![Alt text](Images/image (1).png) 
 
 Demo
 You can demo the site here.
