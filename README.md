@@ -1,4 +1,4 @@
-Senti-Application
+**Senti-Application
 Author
 Stephen Karanja. 6/04/2023.
 
@@ -6,7 +6,8 @@ Description
 A simple budgeting application that let's you calculate your daily and monthly income, expenses and savings.
 
 Landing Page
-Alt text
+![Alt text](Images/image (1).png) 
+
 
 Demo
 You can demo the site here.
