@@ -80,10 +80,6 @@ function displayFinancialInformation() {
   body.appendChild(displayElement);
 }
 // // Step 6: Call the functions in the appropriate order to calculate and display the user's financial information
-// calculateIncome();
-// calculateExpenses();
-// calculateSavings();
-// displayFinancialInformation();
 
 
 //Currency function
