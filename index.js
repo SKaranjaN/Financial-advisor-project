@@ -121,7 +121,7 @@ fetch('https://api.fiscaldata.treasury.gov/services/api/fiscal_service/v1/accoun
   .then(response => response.json())
   .then(data => {
     const exchangeRate = data.exchange_rate;
-    exchangeRateDiv.textContent = `1 USD = ${exchangeRate} KES`;
+    exchangeRateDiv.textContent = `${exchangeRate} KES = 1 USD`;
   })
   .catch(error => {
     console.error('Error fetching exchange rate:', error);
